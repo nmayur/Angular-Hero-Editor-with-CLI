@@ -1,0 +1,15 @@
+<div class="row mt-4">
+    <div class="col-12 col-sm-12">
+        <h5>Hero Search</h5>
+    </div>
+    <div class="col-12 col-sm-3">
+        <div class="form-group">
+            <input type="text" #searchBox id="search-box" (keyup)="search(searchBox.value)" class="form-control" placeholder="Hero Name">
+        </div>
+        <div>
+            <div *ngFor="let hero of heroes | async" (click)="gotoDetail(hero)" class="search-result">
+                {{hero.name}}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+<div *ngIf="hero">
+    <h4>{{hero.name}} details!</h4>
+    <div>
+        <h5><span class="small">ID:</span> {{hero.id}}</h5>
+    </div>
+    <div>
+        <input class="form-control col-sm-3" [(ngModel)]="hero.name" placeholder="name" />
+    </div>
+
+    <button class="btn btn-outline-secondary mt-2" (click)="goBack()">Back</button>
+    <button class="btn btn-outline-success mt-2" (click)="save()">Save</button>
+
+</div>
